@@ -3,20 +3,39 @@ document.addEventListener("keydown", keyPush)
 
  function keyPush(evt) {
     switch (evt.keyCode) {
+        case 65:
         case 37:
-            sol()
+	        if(direction != 65){
+            sol();
+	        direction = 65;
+            }
             break;
+        case 87:
         case 38:
-           yukarı()
+            if(direction != 38){
+                yukarı();
+                direction = 38;
+            }
+
             break;
+        case 68:
         case 39:
-            sag()
+            if(direction != 39){
+                sag();
+                direction = 39;
+            }
+ 
             break;
+        case 83:
         case 40:
-            assa()
+            if(direction != 40){
+                assa();
+                direction = 40;
+            }
+            
             break;
         case 32:
-            sut();
+                sut();            
             break;    
     }
 }
@@ -62,4 +81,6 @@ async function gobrr() {
 
    
 }
+direction = 0;
+
 gobrr();
