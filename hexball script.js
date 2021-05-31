@@ -1,3 +1,42 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//CHANGE EMOJI RIGHT THERE
+upEmoji = "🖕", downEmoji = "👇", leftEmoji = "👈", rightEmoji = "👉", shootEmoji = "😈";
+
+//OTHER VARIABLES
+direction = 0;
+
+var TheTextBox = document.querySelector('[data-hook="input"]')
+var btn = document.querySelector('[data-hook="send"]')
+
+function ChangeAvatar(value) {
+    TheTextBox.value = "/avatar " + value;
+}
+
+function yukarı() {
+    ChangeAvatar(upEmoji);
+    btn.click();
+}
+function sut() {
+    ChangeAvatar(shootEmoji);
+    btn.click();
+}
+function assa() {
+    ChangeAvatar(downEmoji);
+    btn.click();
+}
+
+function sag() {
+    ChangeAvatar(rightEmoji);
+    btn.click();
+}
+
+function sol() {
+    ChangeAvatar(leftEmoji);
+    btn.click();
+}
 
 document.addEventListener("keydown", keyPush)
 
@@ -16,7 +55,6 @@ document.addEventListener("keydown", keyPush)
                 yukarı();
                 direction = 38;
             }
-
             break;
         case 68:
         case 39:
@@ -24,7 +62,6 @@ document.addEventListener("keydown", keyPush)
                 sag();
                 direction = 39;
             }
- 
             break;
         case 83:
         case 40:
@@ -32,55 +69,9 @@ document.addEventListener("keydown", keyPush)
                 assa();
                 direction = 40;
             }
-            
             break;
         case 32:
-                sut();            
+            sut();            
             break;    
     }
 }
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-function yukarı() {
-    var TheTextBox = document.querySelector('[data-hook="input"]')
-    TheTextBox.value = "/avatar 🖕 ";
-    var btn = document.querySelector('[data-hook="send"]')
-    btn.click();
-}
-function sut() {
-    var TheTextBox = document.querySelector('[data-hook="input"]')
-    TheTextBox.value = "/avatar 😈 ";
-    var btn = document.querySelector('[data-hook="send"]')
-    btn.click();
-}
-function assa() {
-    var TheTextBox = document.querySelector('[data-hook="input"]')
-    TheTextBox.value = "/avatar 👇";
-    var btn = document.querySelector('[data-hook="send"]')
-    btn.click();
-}
-
-function sag() {
-    var TheTextBox = document.querySelector('[data-hook="input"]')
-    TheTextBox.value = "/avatar 👉";
-    var btn = document.querySelector('[data-hook="send"]')
-    btn.click();
-}
-
-function sol() {
-    var TheTextBox = document.querySelector('[data-hook="input"]')
-    TheTextBox.value = "/avatar 👈";
-    var btn = document.querySelector('[data-hook="send"]')
-    btn.click();
-}
-
-async function gobrr() {
-
-   
-}
-direction = 0;
-
-gobrr();
