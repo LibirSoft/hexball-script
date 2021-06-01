@@ -39,12 +39,12 @@ function sol() {
 }
 
 function sevinc() {
-    changeAvatar(sevincEmoji);
+    ChangeAvatar(sevincEmoji);
     btn.click();
 }
 
 function lose() {
-    ChangeAvatar(lostEmoji);
+    ChangeAvatar(loseEmoji);
     btn.click();
 }
 document.addEventListener("keydown", keyPush)
