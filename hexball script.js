@@ -3,7 +3,7 @@ function sleep(ms) {
 }
 
 //CHANGE EMOJI RIGHT THERE
-upEmoji = "🖕", downEmoji = "👇", leftEmoji = "👈", rightEmoji = "👉", shootEmoji = "😈";
+upEmoji = "🖕", downEmoji = "👇", leftEmoji = "👈", rightEmoji = "👉", shootEmoji = "😈", sevincEmoji = "😎", loseEmoji = "🥺";
 
 //OTHER VARIABLES
 direction = 0;
@@ -38,40 +38,56 @@ function sol() {
     btn.click();
 }
 
+function sevinc() {
+    changeAvatar(sevincEmoji);
+    btn.click();
+}
+
+function lose() {
+    ChangeAvatar(lostEmoji);
+    btn.click();
+}
 document.addEventListener("keydown", keyPush)
 
- function keyPush(evt) {
+function keyPush(evt) {
     switch (evt.keyCode) {
         case 65:
         case 37:
-	        if(direction != 65){
-            sol();
-	        direction = 65;
+            if (direction != 65) {
+                sol();
+                direction = 65;
             }
             break;
         case 87:
         case 38:
-            if(direction != 38){
+            if (direction != 38) {
                 yukarı();
                 direction = 38;
             }
             break;
         case 68:
         case 39:
-            if(direction != 39){
+            if (direction != 39) {
                 sag();
                 direction = 39;
             }
             break;
         case 83:
         case 40:
-            if(direction != 40){
+            if (direction != 40) {
                 assa();
                 direction = 40;
             }
             break;
         case 32:
-            sut();            
-            break;    
+            sut();
+            break;
+        case 71:
+            sevinc();
+            break;
+
+        case 76:
+            lose();
+            break;
     }
 }
